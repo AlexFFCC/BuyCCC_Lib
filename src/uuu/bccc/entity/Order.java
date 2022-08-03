@@ -72,11 +72,9 @@ public class Order {
 			orderItem.setQuantity(cart.getQuantity(cartItem));
 			
 			orderItemSet.add(orderItem);
-			
 		}
-	
 	}
-	//一筆一筆讀出。item是DAO從資料庫讀出一筆一筆訂單明細十，就建立一個order物件，並由此方法加入order物件中
+	//一筆一筆讀出。item是DAO從資料庫讀出一筆一筆訂單明細時，就建立一個order物件，並由此方法加入order物件中
 	public void add(OrderItem item) {
 		if(item==null) throw new IllegalArgumentException("加入訂單明細時orderItem物件不得為null");
 		
@@ -86,7 +84,7 @@ public class Order {
 	/**
 	 * @return the orderItemSet
 	 */
-	public Set<OrderItem> getOrderItemSet() {//只能回傳副本
+	public Set<OrderItem> getOrderItemSet() {//只回傳副本
 		return new HashSet<>(orderItemSet);
 	}
 	

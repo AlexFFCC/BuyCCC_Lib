@@ -5,8 +5,6 @@ public class CartItem {
 	private Color color;//Pkey allow null
 	private String size="";//Pkey
 	
-	
-	
 	public Product getProduct() {
 		return product;
 	}
