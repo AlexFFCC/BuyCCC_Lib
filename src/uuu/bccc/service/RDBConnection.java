@@ -7,11 +7,11 @@ class RDBConnection {
 	private static final String url = "jdbc:mysql://localhost:3306/bccc";
 	private static final String user = "root";
 	private static final String pwd = "1234";
-	       //回傳型別    方法都要回傳，如果不回傳就要void  throws可以拋出甚麼錯
+
 	static Connection getConnection() throws BCCCException{
 		try {//載入driver
-			Class.forName(driver);//新版不用寫
-			//建立連線 建立起給其他dao使用 所以不用放到小( )中關掉
+			Class.forName(driver);
+			//建立連線
 			try {
 				Connection connection = DriverManager.getConnection(url,user,pwd);
 				return connection;

@@ -21,8 +21,6 @@ public class OrderService {
 	 
 	 public  Order getOrderByIdAndCustomerId(String customerId, String orderId) throws BCCCException{
 		
-//		 Order order = dao.selectOrderByIdAndCustomerId(customerId, orderId);
-//		 if(customerId!=null && order!=null && customerId.equals(order.getmember.getid()))?
 		 return dao.selectOrderByIdAndCustomerId(customerId,orderId);
 	 }
 
